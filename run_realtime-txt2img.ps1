@@ -9,7 +9,18 @@ $Env:XFORMERS_FORCE_DISABLE_TRITON = "1"
 Set-Location demo/realtime-txt2img/view
 
 if (!(Test-Path -Path "build")) {
-    Write-Output  "正在NPM编译，如果失败你需要安装单独NPM包..."
+    Write-Output  "try to download build zip..."
+
+    wget -Uri "https://github.com/sdbds/StreamDiffusion-for-windows/releases/download/1.0/build.zip" -OutFile "./build.zip"
+
+    Expand-Archive -Path ./build.zip -DestinationPath ./build
+
+    Remove-Item -Path ./build.zip -Recurse -Force
+
+}
+
+if (!(Test-Path -Path "build/*")) {
+    Write-Output  "unzip or download failed,npm building..."
 
     npm install
 

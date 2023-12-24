@@ -20,7 +20,7 @@ pip install -e .
 
 python setup.py develop easy_install streamdiffusion[tensorrt]
 
-python -m streamdiffusion.tools.install-tensorrt
+pip install --pre tensorrt --extra-index-url https://pypi.nvidia.com
 
 pip install pywin32 -i https://mirror.baidu.com/pypi/simple
 
