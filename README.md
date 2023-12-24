@@ -63,95 +63,28 @@ Feel free to explore each feature by following the provided links to learn more 
 ```
 
 
-## Installation
+## ⚒️ Installation
+prerequisites: `python>=3.10`, `CUDA>=11.3`, `Nodejs` and `git`.
 
+Python and Git:
 
+- Python 3.10.11: https://www.python.org/ftp/python/3.10.11/python-3.10.11-amd64.exe
+- git: https://git-scm.com/download/win
+- Nodejs: https://nodejs.org/en/download(optional)
 
-### Step0: clone this repository
+If you dont want to download and install nodejs, you can download from release page and unzip to repo dir manually.
 
-```bash
-git clone https://github.com/cumulo-autumn/StreamDiffusion.git
+Give unrestricted script access to powershell so venv can work:
+
+- Open an administrator powershell window
+- Type `Set-ExecutionPolicy Unrestricted` and answer A
+- Close admin powershell window
+
+```
+git clone https://github.com/sdbds/magic-animate-for-windows/
 ```
 
-### Step1: Make Environment
-
-You can install StreamDiffusion via pip, conda, or Docker(explanation below).
-
-```bash
-conda create -n streamdiffusion python=3.10
-conda activate streamdiffusion
-```
-
-OR
-
-```cmd
-python -m venv .venv
-# Windows
-.\.venv\Scripts\activate
-# Linux
-source .venv/bin/activate
-```
-
-### Step2: Install PyTorch
-
-Select the appropriate version for your system.
-
-CUDA 11.8
-
-```bash
-pip3 install torch==2.1.0 torchvision==0.16.0 xformers --index-url https://download.pytorch.org/whl/cu118
-```
-
-CUDA 12.1
-
-```bash
-pip3 install torch==2.1.0 torchvision==0.16.0 xformers --index-url https://download.pytorch.org/whl/cu121
-```
-details: https://pytorch.org/
-
-### Step3: Install StreamDiffusion
-
-#### For User
-
-Install StreamDiffusion
-
-```bash
-#for Latest Version (recommended)
-pip install git+https://github.com/cumulo-autumn/StreamDiffusion.git@main#egg=streamdiffusion[tensorrt]
-
-
-#or
-
-
-#for Stable Version
-pip install streamdiffusion[tensorrt]
-```
-
-Install TensorRT extension and pywin32
-(※※pywin32 is required only for Windows.)
-
-```bash
-python -m streamdiffusion.tools.install-tensorrt
-# If you use Windows, you need to install pywin32 
-pip install pywin32
-```
-
-
-#### For Developer
-
-```bash
-python setup.py develop easy_install streamdiffusion[tensorrt]
-python -m streamdiffusion.tools.install-tensorrt
-```
-
-### Docker Installation (TensorRT Ready)
-
-```bash
-git clone https://github.com/cumulo-autumn/StreamDiffusion.git
-cd StreamDiffusion
-docker build -t stream-diffusion:latest -f Dockerfile .
-docker run --gpus all -it -v $(pwd):/home/ubuntu/streamdiffusion stream-diffusion:latest
-```
+Install with Powershell run `install.ps1` or `install-cn.ps1`(for Chinese)
 
 ## Quick Start
 
@@ -161,6 +94,8 @@ You can try StreamDiffusion in [`examples`](./examples) directory.
 |:--------------------:|:--------------------:|
 | ![画像5](./assets/demo_04.gif) | ![画像6](./assets/demo_05.gif) |
 
+run powershell with `run_screen.ps1`
+
 ## Real-Time Txt2Img Demo
 
 There is an interactive txt2img demo in [`demo/realtime-txt2img`](./demo/realtime-txt2img) directory!
@@ -168,6 +103,8 @@ There is an interactive txt2img demo in [`demo/realtime-txt2img`](./demo/realtim
 <p align="center">
   <img src="./assets/demo_01.gif" width=100%>
 </p>
+
+run powershell with `run_realtime-txt2img.ps1`
 
 ## Usage Example
 We provide a simple example of how to use StreamDiffusion. For more detailed examples, please refer to [`examples`](./examples) directory.
