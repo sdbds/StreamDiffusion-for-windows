@@ -88,23 +88,22 @@ Install with Powershell run `install.ps1` or `install-cn.ps1`(for Chinese)
 
 ## Quick Start
 
+Run powershell with `run_screen.ps1`
+
 You can try StreamDiffusion in [`examples`](./examples) directory.
 
 | ![画像3](./assets/demo_02.gif) | ![画像4](./assets/demo_03.gif) |
 |:--------------------:|:--------------------:|
 | ![画像5](./assets/demo_04.gif) | ![画像6](./assets/demo_05.gif) |
 
-run powershell with `run_screen.ps1`
-
 ## Real-Time Txt2Img Demo
+Run powershell with `run_realtime-txt2img.ps1`
 
 There is an interactive txt2img demo in [`demo/realtime-txt2img`](./demo/realtime-txt2img) directory!
 
 <p align="center">
   <img src="./assets/demo_01.gif" width=100%>
 </p>
-
-run powershell with `run_realtime-txt2img.ps1`
 
 ## Usage Example
 We provide a simple example of how to use StreamDiffusion. For more detailed examples, please refer to [`examples`](./examples) directory.
