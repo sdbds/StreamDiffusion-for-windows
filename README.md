@@ -71,7 +71,7 @@ Python and Git:
 - Python 3.10.11: https://www.python.org/ftp/python/3.10.11/python-3.10.11-amd64.exe
 - git: https://git-scm.com/download/win
 - Nodejs: https://nodejs.org/en/download (optional)
-- Tensorrt: https://developer.nvidia.com/tensorrt (optional)
+- Tensorrt: https://developer.nvidia.com/nvidia-tensorrt-8x-download (optional)
 
 If you dont want to download and install nodejs, you can download from release page and unzip to repo dir manually.
 
